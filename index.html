@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Estharakula Nagaraju — DevOps Engineer</title>
+<meta name="description" content="Portfolio of Estharakula Nagaraju, a result-oriented DevOps Engineer with hands-on experience in CI/CD, Kubernetes, Docker, Terraform, Ansible, and AWS Cloud." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#18181B',
+        steel: '#3F3F46',
+        accent: '#2563EB',
+        paper: '#FAFAFA',
+        draw: '#09090B',
+      },
+      fontFamily: {
+        display: ['"Space Grotesk"', 'sans-serif'],
+        body: ['Archivo', 'sans-serif'],
+      },
+    },
+  },
+};
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  html { scroll-padding-top: 6.5rem; }
+  .marquee-track { animation: marquee 32s linear infinite; }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .marquee-track { animation: none; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+
+<body class="bg-paper font-body text-draw antialiased">
+
+<!-- ================= NAVBAR ================= -->
+<header class="fixed top-4 left-4 right-4 z-50">
+  <nav class="mx-auto max-w-6xl flex items-center justify-between rounded-2xl border border-ink/10 bg-white/85 px-4 py-3 shadow-lg shadow-ink/5 backdrop-blur-md">
+    <a href="#home" class="font-display text-xl font-bold tracking-tight cursor-pointer">
+      EN<span class="text-accent">.</span>
+    </a>
+    <ul class="hidden items-center gap-8 font-display text-sm font-medium text-steel md:flex">
+      <li><a href="#about" class="transition-colors duration-200 hover:text-accent">About</a></li>
+      <li><a href="#skills" class="transition-colors duration-200 hover:text-accent">Skills</a></li>
+      <li><a href="#projects" class="transition-colors duration-200 hover:text-accent">Projects</a></li>
+      <li><a href="#education" class="transition-colors duration-200 hover:text-accent">Education</a></li>
+      <li><a href="#contact" class="transition-colors duration-200 hover:text-accent">Contact</a></li>
+    </ul>
+    <a href="#contact" class="hidden md:inline-flex items-center gap-2 rounded-xl bg-ink px-5 py-2.5 font-display text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent cursor-pointer">
+      Hire Me
+    </a>
+    <button id="menu-btn" class="md:hidden rounded-lg p-2 transition-colors duration-200 hover:bg-ink/5 cursor-pointer" aria-label="Toggle navigation menu">
+      <i data-lucide="menu" class="h-6 w-6"></i>
+      <i data-lucide="x" class="hidden h-6 w-6"></i>
+    </button>
+  </nav>
+  <div id="mobile-menu" class="mx-auto mt-2 hidden max-w-6xl rounded-2xl border border-ink/10 bg-white/95 px-6 py-4 shadow-lg backdrop-blur-md md:hidden">
+    <ul class="space-y-3 font-display text-base font-medium text-steel">
+      <li><a href="#about" class="block py-1 hover:text-accent">About</a></li>
+      <li><a href="#skills" class="block py-1 hover:text-accent">Skills</a></li>
+      <li><a href="#projects" class="block py-1 hover:text-accent">Projects</a></li>
+      <li><a href="#education" class="block py-1 hover:text-accent">Education</a></li>
+      <li><a href="#contact" class="block py-1 hover:text-accent">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="relative overflow-hidden pt-40 pb-20 md:pt-48">
+  <div class="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-accent/10 blur-3xl"></div>
+  <div class="pointer-events-none absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-accent/5 blur-3xl"></div>
+
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="grid items-center gap-14 lg:grid-cols-2">
+      <div>
+        <p class="inline-flex items-center gap-2 rounded-full border border-ink/10 bg-white px-4 py-1.5 font-display text-xs font-semibold uppercase tracking-widest text-accent">
+          <span class="h-2 w-2 rounded-full bg-accent"></span>
+          DevOps Engineer
+        </p>
+        <h1 class="mt-6 font-display text-5xl font-bold leading-none tracking-tight text-draw md:text-7xl">
+          Estharakula<br /><span class="text-accent">Nagaraju</span>
+        </h1>
+        <p class="mt-6 max-w-xl text-lg leading-relaxed text-steel">
+          Result-oriented engineer with hands-on experience in automating, optimizing
+          and supporting deployments across multiple servers and the cloud — spanning
+          CI/CD, configuration management, containerization and source code management.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a href="#contact" class="inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-3.5 font-display text-sm font-semibold text-white shadow-lg shadow-accent/25 transition-colors duration-200 hover:bg-ink cursor-pointer">
+            Get in touch <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          </a>
+          <a href="#projects" class="inline-flex items-center gap-2 rounded-xl border border-ink/15 bg-white px-6 py-3.5 font-display text-sm font-semibold text-draw transition-colors duration-200 hover:border-accent hover:text-accent cursor-pointer">
+            View projects
+          </a>
+        </div>
+        <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-steel">
+          <a href="mailto:nagarajuestharakula764@gmail.com" class="inline-flex items-center gap-2 transition-colors duration-200 hover:text-accent cursor-pointer">
+            <i data-lucide="mail" class="h-4 w-4"></i> nagarajuestharakula764@gmail.com
+          </a>
+          <a href="tel:+917396402052" class="inline-flex items-center gap-2 transition-colors duration-200 hover:text-accent cursor-pointer">
+            <i data-lucide="phone" class="h-4 w-4"></i> 7396402052
+          </a>
+        </div>
+      </div>
+
+      <!-- Terminal card -->
+      <div class="relative">
+        <div class="pointer-events-none absolute -inset-3 rounded-3xl border-2 border-dashed border-accent/30"></div>
+        <div class="relative overflow-hidden rounded-2xl border border-ink/10 bg-ink text-left shadow-2xl shadow-ink/20">
+          <div class="flex items-center gap-2 border-b border-white/10 px-5 py-3.5">
+            <span class="h-3 w-3 rounded-full bg-red-400"></span>
+            <span class="h-3 w-3 rounded-full bg-amber-400"></span>
+            <span class="h-3 w-3 rounded-full bg-emerald-400"></span>
+            <span class="ml-3 font-display text-xs text-white/50">nagaraju@devops ~ deployment</span>
+          </div>
+          <div class="space-y-3 px-5 py-6 font-mono text-sm text-white/80">
+            <p><span class="text-emerald-400">$</span> git clone spring-petclinic.git</p>
+            <p><span class="text-emerald-400">$</span> mvn clean package<span class="text-white/40">  # build</span></p>
+            <p><span class="text-emerald-400">$</span> sonar-scanner<span class="text-white/40">  # code quality</span></p>
+            <p><span class="text-emerald-400">$</span> docker build -t petclinic:1.0.0<span class="text-white/40">  # image</span></p>
+            <p><span class="text-emerald-400">$</span> docker push nexus:port/petclinic:1.0.0</p>
+            <p><span class="text-emerald-400">$</span> kubectl apply -f deployment.yaml<span class="text-accent">  # deploy</span></p>
+            <p class="pt-1"><span class="text-amber-400">✓</span> <span class="text-white">Deployment successful — EKS Cluster</span></p>
+          </div>
+        </div>
+        <div class="mt-8 grid grid-cols-3 gap-4">
+          <div class="rounded-2xl border border-ink/10 bg-white p-4 text-center">
+            <p class="font-display text-3xl font-bold text-accent">3</p>
+            <p class="mt-1 text-xs font-medium uppercase tracking-wider text-steel">Deployments</p>
+          </div>
+          <div class="rounded-2xl border border-ink/10 bg-white p-4 text-center">
+            <p class="font-display text-3xl font-bold text-ink">3</p>
+            <p class="mt-1 text-xs font-medium uppercase tracking-wider text-steel">Projects</p>
+          </div>
+          <div class="rounded-2xl border border-ink/10 bg-white p-4 text-center">
+            <p class="font-display text-3xl font-bold text-ink">15+</p>
+            <p class="mt-1 text-xs font-medium uppercase tracking-wider text-steel">Tools</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TOOLS MARQUEE ================= -->
+<section aria-label="Technologies" class="border-y border-ink/10 bg-white py-6">
+  <div class="relative overflow-hidden">
+    <div class="marquee-track flex w-max items-center gap-10 whitespace-nowrap">
+      <!-- track 1 -->
+      <span class="flex items-center gap-10 font-display text-lg font-semibold uppercase tracking-widest text-steel">
+        <span>Jenkins</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>Docker</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>Kubernetes</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>Terraform</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>Ansible</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>Maven</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>AWS</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>Git</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>SonarQube</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>Nexus</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>Trivy</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i>
+      </span>
+      <!-- track 2 (duplicate for seamless loop) -->
+      <span class="flex items-center gap-10 font-display text-lg font-semibold uppercase tracking-widest text-steel" aria-hidden="true">
+        <span>Jenkins</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>Docker</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>Kubernetes</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>Terraform</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>Ansible</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>Maven</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>AWS</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>Git</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>SonarQube</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>Nexus</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i><span>Trivy</span><i data-lucide="circle" class="h-2 w-2 fill-accent text-accent"></i>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="scroll-mt-28 py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-14 lg:grid-cols-5">
+      <div class="lg:col-span-3">
+        <p class="font-display text-sm font-semibold uppercase tracking-widest text-accent">01 — About</p>
+        <h2 class="mt-4 font-display text-4xl font-bold tracking-tight text-draw md:text-5xl">Engineer who ships<br /><span class="text-accent">reliably.</span></h2>
+        <p class="mt-6 text-lg leading-relaxed text-steel">
+          I support, automate and optimize deployments across multiple servers and the cloud,
+          owning the full pipeline from source code to production. My day-to-day revolves around
+          building and packaging code with Maven, baking repeatable images with Docker,
+          provisioning infrastructure with Ansible &amp; Terraform and running workloads
+          on Kubernetes clusters — on AWS and Azure.
+        </p>
+        <p class="mt-4 text-lg leading-relaxed text-steel">
+          Reliability is my default: every release is quality-checked with SonarQube, scanned
+          for vulnerabilities with Trivy and OWASP Dependency Check, and pushed through a
+          CI/CD pipeline with Jenkins. I speak fluent Git, Python-free pipelines and fluent
+          documentation on Confluence.
+        </p>
+        <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div class="rounded-2xl bg-white p-4 shadow-sm transition-colors duration-200 hover:bg-accent/5">
+            <i data-lucide="zap" class="h-6 w-6 text-accent"></i>
+            <p class="mt-3 font-display text-sm font-semibold">Confident</p>
+          </div>
+          <div class="rounded-2xl bg-white p-4 shadow-sm transition-colors duration-200 hover:bg-accent/5">
+            <i data-lucide="users" class="h-6 w-6 text-accent"></i>
+            <p class="mt-3 font-display text-sm font-semibold">Team Player</p>
+          </div>
+          <div class="rounded-2xl bg-white p-4 shadow-sm transition-colors duration-200 hover:bg-accent/5">
+            <i data-lucide="target" class="h-6 w-6 text-accent"></i>
+            <p class="mt-3 font-display text-sm font-semibold">Disciplined</p>
+          </div>
+          <div class="rounded-2xl bg-white p-4 shadow-sm transition-colors duration-200 hover:bg-accent/5">
+            <i data-lucide="message-circle" class="h-6 w-6 text-accent"></i>
+            <p class="mt-3 font-display text-sm font-semibold">Clear Communicator</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-2">
+        <div class="rounded-3xl border border-ink/10 bg-white p-8">
+          <h3 class="font-display text-xl font-bold text-draw">Personal Details</h3>
+          <dl class="mt-6 space-y-4 text-sm">
+            <div class="flex justify-between gap-4 border-b border-ink/5 pb-3">
+              <dt class="font-display font-semibold text-steel">Name</dt>
+              <dd class="text-right text-draw">Estharakula Nagaraju</dd>
+            </div>
+            <div class="flex justify-between gap-4 border-b border-ink/5 pb-3">
+              <dt class="font-display font-semibold text-steel">DOB</dt>
+              <dd class="text-right text-draw">26-08-1997</dd>
+            </div>
+            <div class="flex justify-between gap-4 border-b border-ink/5 pb-3">
+              <dt class="font-display font-semibold text-steel">Languages</dt>
+              <dd class="text-right text-draw">Telugu, English, Hindi</dd>
+            </div>
+            <div class="flex justify-between gap-4 border-b border-ink/5 pb-3">
+              <dt class="font-display font-semibold text-steel">Nationality</dt>
+              <dd class="text-right text-draw">Indian</dd>
+            </div>
+            <div class="flex justify-between gap-4">
+              <dt class="font-display font-semibold text-steel">Location</dt>
+              <dd class="max-w-[14rem] text-right text-draw">1-116, Recharla, Chintalapudi, Eluru Dist.</dd>
+            </div>
+          </dl>
+          <a href="mailto:nagarajuestharakula764@gmail.com" class="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-ink px-6 py-3.5 font-display text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent cursor-pointer">
+            Download Resume <i data-lucide="download" class="h-4 w-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="scroll-mt-28 border-y border-ink/10 bg-white py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <p class="font-display text-sm font-semibold uppercase tracking-widest text-accent">02 — Skills</p>
+    <h2 class="mt-4 font-display text-4xl font-bold tracking-tight text-draw md:text-5xl">My toolchain.</h2>
+    <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="group rounded-3xl border border-ink/10 bg-paper p-7 transition-all duration-200 hover:-translate-y-1 hover:border-accent hover:shadow-xl hover:shadow-accent/10 cursor-pointer">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-ink text-white transition-colors duration-200 group-hover:bg-accent">
+          <i data-lucide="workflow" class="h-6 w-6"></i>
+        </div>
+        <h3 class="mt-5 font-display text-lg font-bold">CI/CD</h3>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">Jenkins</span>
+        </div>
+      </div>
+      <div class="group rounded-3xl border border-ink/10 bg-paper p-7 transition-all duration-200 hover:-translate-y-1 hover:border-accent hover:shadow-xl hover:shadow-accent/10 cursor-pointer">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-ink text-white transition-colors duration-200 group-hover:bg-accent">
+          <i data-lucide="container" class="h-6 w-6"></i>
+        </div>
+        <h3 class="mt-5 font-display text-lg font-bold">Containers &amp; Orchestration</h3>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">Docker</span>
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">Kubernetes</span>
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">EKS</span>
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">AKS</span>
+        </div>
+      </div>
+      <div class="group rounded-3xl border border-ink/10 bg-paper p-7 transition-all duration-200 hover:-translate-y-1 hover:border-accent hover:shadow-xl hover:shadow-accent/10 cursor-pointer">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-ink text-white transition-colors duration-200 group-hover:bg-accent">
+          <i data-lucide="git-branch" class="h-6 w-6"></i>
+        </div>
+        <h3 class="mt-5 font-display text-lg font-bold">Source &amp; Build</h3>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">Git</span>
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">Maven</span>
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">Nexus</span>
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">JFrog</span>
+        </div>
+      </div>
+      <div class="group rounded-3xl border border-ink/10 bg-paper p-7 transition-all duration-200 hover:-translate-y-1 hover:border-accent hover:shadow-xl hover:shadow-accent/10 cursor-pointer">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-ink text-white transition-colors duration-200 group-hover:bg-accent">
+          <i data-lucide="braces" class="h-6 w-6"></i>
+        </div>
+        <h3 class="mt-5 font-display text-lg font-bold">Infrastructure as Code</h3>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">Terraform</span>
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">Ansible</span>
+        </div>
+      </div>
+      <div class="group rounded-3xl border border-ink/10 bg-paper p-7 transition-all duration-200 hover:-translate-y-1 hover:border-accent hover:shadow-xl hover:shadow-accent/10 cursor-pointer">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-ink text-white transition-colors duration-200 group-hover:bg-accent">
+          <i data-lucide="shield-check" class="h-6 w-6"></i>
+        </div>
+        <h3 class="mt-5 font-display text-lg font-bold">Security &amp; Quality</h3>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">SonarQube</span>
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">Trivy</span>
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">OWASP</span>
+        </div>
+      </div>
+      <div class="group rounded-3xl border border-ink/10 bg-paper p-7 transition-all duration-200 hover:-translate-y-1 hover:border-accent hover:shadow-xl hover:shadow-accent/10 cursor-pointer">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-ink text-white transition-colors duration-200 group-hover:bg-accent">
+          <i data-lucide="cloud" class="h-6 w-6"></i>
+        </div>
+        <h3 class="mt-5 font-display text-lg font-bold">Cloud &amp; OS</h3>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">AWS</span>
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">Linux</span>
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">Windows</span>
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">JIRA</span>
+          <span class="rounded-lg bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">Confluence</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="scroll-mt-28 py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <p class="font-display text-sm font-semibold uppercase tracking-widest text-accent">03 — Projects</p>
+    <h2 class="mt-4 font-display text-4xl font-bold tracking-tight text-draw md:text-5xl">Selected work.</h2>
+    <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Project 1 -->
+      <article class="group flex flex-col rounded-3xl border border-ink/10 bg-white p-7 transition-all duration-200 hover:-translate-y-1 hover:border-accent hover:shadow-xl hover:shadow-accent/10 cursor-pointer">
+        <div class="flex items-center justify-between">
+          <span class="font-display text-5xl font-bold text-ink/10 transition-colors duration-200 group-hover:text-accent/20">01</span>
+          <i data-lucide="arrow-up-right" class="h-6 w-6 text-accent transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
+        </div>
+        <h3 class="mt-4 font-display text-xl font-bold text-draw">Spring Boot Application Deployment</h3>
+        <p class="mt-3 flex-1 text-sm leading-relaxed text-steel">
+          Automated the end-to-end deployment of a Java Spring Boot application — build with
+          Maven, containerized with Docker and deployed on a Kubernetes cluster.
+        </p>
+        <ul class="mt-5 space-y-2 text-sm text-steel">
+          <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-accent"></i>Pipeline orchestration on Jenkins</li>
+          <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-accent"></i>Code quality gate with SonarQube</li>
+          <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-accent"></i>Artifacts stored in Nexus</li>
+          <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-accent"></i>Deployment to Kubernetes</li>
+        </ul>
+        <div class="mt-6 flex flex-wrap gap-2 border-t border-ink/5 pt-5">
+          <span class="rounded-lg bg-ink px-2.5 py-1 text-xs font-semibold text-white">Jenkins</span>
+          <span class="rounded-lg bg-ink px-2.5 py-1 text-xs font-semibold text-white">Docker</span>
+          <span class="rounded-lg bg-ink px-2.5 py-1 text-xs font-semibold text-white">Kubernetes</span>
+          <span class="rounded-lg bg-ink px-2.5 py-1 text-xs font-semibold text-white">Maven</span>
+        </div>
+      </article>
+      <!-- Project 2 -->
+      <article class="group flex flex-col rounded-3xl border border-ink/10 bg-white p-7 transition-all duration-200 hover:-translate-y-1 hover:border-accent hover:shadow-xl hover:shadow-accent/10 cursor-pointer">
+        <div class="flex items-center justify-between">
+          <span class="font-display text-5xl font-bold text-ink/10 transition-colors duration-200 group-hover:text-accent/20">02</span>
+          <i data-lucide="arrow-up-right" class="h-6 w-6 text-accent transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
+        </div>
+        <h3 class="mt-4 font-display text-xl font-bold text-draw">Petclinic Deployment on AWS</h3>
+        <p class="mt-3 flex-1 text-sm leading-relaxed text-steel">
+          Provisioned infrastructure with Terraform, built a Java Spring application with Maven
+          and deployed containers to an Amazon EKS cluster with AWS artifacts.
+        </p>
+        <ul class="mt-5 space-y-2 text-sm text-steel">
+          <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-accent"></i>Infrastructure provisioning via Terraform</li>
+          <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-accent"></i>CI/CD pipeline on AWS DevOps</li>
+          <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-accent"></i>Docker images on AWS artifacts</li>
+          <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-accent"></i>Orchestration on EKS cluster</li>
+        </ul>
+        <div class="mt-6 flex flex-wrap gap-2 border-t border-ink/5 pt-5">
+          <span class="rounded-lg bg-ink px-2.5 py-1 text-xs font-semibold text-white">Terraform</span>
+          <span class="rounded-lg bg-ink px-2.5 py-1 text-xs font-semibold text-white">AWS</span>
+          <span class="rounded-lg bg-ink px-2.5 py-1 text-xs font-semibold text-white">EKS</span>
+          <span class="rounded-lg bg-ink px-2.5 py-1 text-xs font-semibold text-white">Maven</span>
+        </div>
+      </article>
+      <!-- Project 3 -->
+      <article class="group flex flex-col rounded-3xl border border-ink/10 bg-white p-7 transition-all duration-200 hover:-translate-y-1 hover:border-accent hover:shadow-xl hover:shadow-accent/10 cursor-pointer">
+        <div class="flex items-center justify-between">
+          <span class="font-display text-5xl font-bold text-ink/10 transition-colors duration-200 group-hover:text-accent/20">03</span>
+          <i data-lucide="arrow-up-right" class="h-6 w-6 text-accent transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
+        </div>
+        <h3 class="mt-4 font-display text-xl font-bold text-draw">Petclinic Deployment on Azure</h3>
+        <p class="mt-3 flex-1 text-sm leading-relaxed text-steel">
+          Deployed the same Java Spring application to an AKS cluster on Azure, using
+          Terraform for provisioning, Maven for builds and JFrog for artifact management.
+        </p>
+        <ul class="mt-5 space-y-2 text-sm text-steel">
+          <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-accent"></i>Kubernetes deployment on AKS</li>
+          <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-accent"></i>Pipelines with AWS DevOps</li>
+          <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-accent"></i>Artifacts pushed to JFrog</li>
+          <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-accent"></i>IaC with Terraform</li>
+        </ul>
+        <div class="mt-6 flex flex-wrap gap-2 border-t border-ink/5 pt-5">
+          <span class="rounded-lg bg-ink px-2.5 py-1 text-xs font-semibold text-white">AKS</span>
+          <span class="rounded-lg bg-ink px-2.5 py-1 text-xs font-semibold text-white">Terraform</span>
+          <span class="rounded-lg bg-ink px-2.5 py-1 text-xs font-semibold text-white">JFrog</span>
+          <span class="rounded-lg bg-ink px-2.5 py-1 text-xs font-semibold text-white">Docker</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section id="education" class="scroll-mt-28 border-y border-ink/10 bg-ink py-20 text-white md:py-28">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <p class="font-display text-sm font-semibold uppercase tracking-widest text-accent">04 — Education</p>
+    <h2 class="mt-4 font-display text-4xl font-bold tracking-tight text-white md:text-5xl">Foundation.</h2>
+    <div class="mt-14 grid gap-6 md:grid-cols-3">
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-7">
+        <p class="font-display text-sm font-semibold text-accent">2022</p>
+        <h3 class="mt-3 font-display text-xl font-bold">B.Tech</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/70">Dr. Paul Raj Engineering College</p>
+      </div>
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-7">
+        <p class="font-display text-sm font-semibold text-accent">2018</p>
+        <h3 class="mt-3 font-display text-xl font-bold">Diploma</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/70">Gite Engineering College</p>
+      </div>
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-7">
+        <p class="font-display text-sm font-semibold text-accent">2013</p>
+        <h3 class="mt-3 font-display text-xl font-bold">SSC</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/70">Z P P High School</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="scroll-mt-28 py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="rounded-[2.5rem] bg-ink px-6 py-16 text-center text-white md:px-16 md:py-20">
+      <p class="font-display text-sm font-semibold uppercase tracking-widest text-accent">05 — Contact</p>
+      <h2 class="mx-auto mt-5 max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight md:text-6xl">
+        Let's build something<br />that <span class="text-accent">ships.</span>
+      </h2>
+      <p class="mx-auto mt-6 max-w-xl text-lg text-white/70">
+        Looking for someone to automate, containerize and accelerate your deployments?
+        I'm one message away.
+      </p>
+      <div class="mt-10 grid gap-4 sm:grid-cols-3">
+        <a href="mailto:nagarajuestharakula764@gmail.com" class="group rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors duration-200 hover:border-accent hover:bg-white/10 cursor-pointer">
+          <i data-lucide="mail" class="mx-auto h-6 w-6 text-accent"></i>
+          <p class="mt-3 font-display text-sm font-semibold">Email</p>
+          <p class="mt-1 break-all text-xs text-white/60">nagarajuestharakula764@gmail.com</p>
+        </a>
+        <a href="tel:+917396402052" class="group rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors duration-200 hover:border-accent hover:bg-white/10 cursor-pointer">
+          <i data-lucide="phone" class="mx-auto h-6 w-6 text-accent"></i>
+          <p class="mt-3 font-display text-sm font-semibold">Phone</p>
+          <p class="mt-1 text-xs text-white/60">7396402052</p>
+        </a>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <i data-lucide="map-pin" class="mx-auto h-6 w-6 text-accent"></i>
+          <p class="mt-3 font-display text-sm font-semibold">Location</p>
+          <p class="mt-1 text-xs text-white/60">1-116, Recharla, Chintalapudi, Eluru Dist.</p>
+        </div>
+      </div>
+      <a href="mailto:nagarajuestharakula764@gmail.com" class="mt-10 inline-flex items-center gap-2 rounded-xl bg-accent px-8 py-4 font-display text-sm font-semibold text-white shadow-lg shadow-accent/30 transition-colors duration-200 hover:bg-white hover:text-ink cursor-pointer">
+        Start a conversation <i data-lucide="send" class="h-4 w-4"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="border-t border-ink/10 bg-white pb-10 pt-14">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+      <a href="#home" class="font-display text-xl font-bold tracking-tight text-draw cursor-pointer">
+        EN<span class="text-accent">.</span>
+      </a>
+      <p class="text-center text-sm text-steel">
+        © 2025 Estharakula Nagaraju · DevOps Engineer
+      </p>
+      <a href="#home" class="inline-flex items-center gap-2 font-display text-sm font-semibold text-steel transition-colors duration-200 hover:text-accent cursor-pointer">
+        Back to top <i data-lucide="arrow-up" class="h-4 w-4"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = menuBtn.querySelector('[data-lucide="menu"]');
+  const closeIcon = menuBtn.querySelector('[data-lucide="x"]');
+
+  menuBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    menuIcon.classList.toggle('hidden', !isOpen ? false : true);
+    closeIcon.classList.toggle('hidden', isOpen);
+  });
+
+  mobileMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    });
+  });
+
+  lucide.createIcons();
+</script>
+</body>
+</html>
